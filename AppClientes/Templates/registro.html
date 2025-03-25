@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="card p-4" style="width: 400px;">
+        <h3 class="text-center">Registro de Clientes</h3>
+        <form action="/registrar_Cli/" method="POST">{% csrf_token %}
+            <div class="mb-3">
+                <label for="txtdni" class="form-label">DNI</label>
+                <input type="text" id="txtdni" name="txtdni" class="form-control" placeholder="DNI">
+            </div>
+            <div class="mb-3">
+                <label for="txtnombre" class="form-label">Nombre</label>
+                <input type="text" id="txtnombre" name="txtnombre" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="txtemail" class="form-label">Email</label>
+                <input type="email" id="txtemail" name="txtemail" class="form-control" placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <label for="txtmonto" class="form-label">Monto</label>
+                <input type="text" id="txtmonto" name="txtmonto" class="form-control" placeholder="Monto">
+            </div>
+            <div class="mb-3">
+                <label for="txttelefono" class="form-label">Teléfono</label>
+                <input type="text" id="txttelefono" name="txttelefono" class="form-control" placeholder="Teléfono">
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="reset" class="btn btn-secondary">Limpiar</button>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
